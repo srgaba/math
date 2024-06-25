@@ -1,0 +1,77 @@
+# Solving Variations with Repetition
+
+In this lecture, we will explore the concept of variations with repetition, which is closely related to permutations but has its distinct characteristics. This concept is crucial in various fields, including data science, cryptography, and combinatorial problems.
+
+## Understanding Variations
+
+Variations represent the total number of ways to pick and arrange some elements from a given set. Unlike permutations, where each element is used only once, variations allow for repetition of elements.
+
+### Example: Combination Lock
+
+Consider a practical example: you are on vacation and forget the code for the combination lock on your carry-on. The lock requires a two-letter code using only the letters A, B, and C to unlock it. Let's determine how many possible combinations exist.
+
+1. **First Position**: We have three choices: A, B, or C.
+2. **Second Position**: Since repetition is allowed, we again have three choices: A, B, or C.
+
+If we choose A for the first position, we have three choices for the second position:
+- AA
+- AB
+- AC
+
+Similarly, if we choose B for the first position, we get:
+- BA
+- BB
+- BC
+
+Finally, choosing C for the first position gives us:
+- CA
+- CB
+- CC
+
+In total, there are $3 \times 3 = 9$ possible combinations.
+
+### General Formula
+
+To generalize this process, we use the formula for variations with repetition:
+
+$$
+\bar{V}(N, P) = N^P
+$$
+
+Where:
+- $N$ is the total number of elements available.
+- $P$ is the number of positions to fill.
+
+This formula tells us that the number of variations with repetition when picking $P$ elements out of $N$ elements is equal to $N$ raised to the power of $P$.
+
+### Applying the Formula
+
+Using the combination lock example, we have $N = 3$ (letters A, B, C) and $P = 2$ (two-letter code):
+
+$$
+\bar{V}(3, 2) = 3^2 = 9
+$$
+
+Therefore, there are 9 different two-letter passcodes possible with the letters A, B, and C.
+
+### Larger Sets
+
+Let's consider a larger set. If the lock could use any of the 26 letters of the alphabet:
+
+$$
+\bar{V}(26, 2) = 26^2 = 676
+$$
+
+Thus, there are 676 different variations of two-letter passcodes using any of the 26 letters.
+
+## Summary
+
+Variations with repetition allow us to calculate the total number of ways to pick and arrange elements from a set where repetition of elements is permitted. The key formula to remember is:
+
+$$
+\bar{V}(N, P) = N^P
+$$
+
+By applying this formula, we can solve problems involving different combinations and arrangements of elements, whether for simple cases like a combination lock or more complex scenarios in data science.
+
+Make sure to complete the exercises after this lecture to test your knowledge and reinforce what you've learned. In the next lecture, we will explore variations without repetition and how to compute them. Thank you for watching, and see you next time!
